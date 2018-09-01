@@ -7,29 +7,31 @@
 
       <md-app-drawer md-permanent="full">
         <md-toolbar class="md-transparent" md-elevation="0">
-          Chapter
+          <span class="md-title">Lessons</span>
         </md-toolbar>
 
         <md-list>
-          <md-list-item>
+          <md-list-item to="/">
             <md-avatar class="md-avatar-icon">1</md-avatar>
             <span class="md-list-item-text">Hello World</span>
           </md-list-item>
 
-          <md-list-item>
+          <md-list-item to="/chapter2">
             <md-avatar class="md-avatar-icon">2</md-avatar>
-            <span class="md-list-item-text">Hello World</span>
+            <span class="md-list-item-text">GET/POST</span>
           </md-list-item>
 
-          <md-list-item>
+          <md-list-item md-expand to="/chapter3">
             <md-avatar class="md-avatar-icon">3</md-avatar>
-            <span class="md-list-item-text">Hello World</span>
+            <span class="md-list-item-text">CRUD Operartion</span>
+            <md-list slot="md-expand">
+              <md-list-item class="md-inset" to="/chapter3-1">Create</md-list-item>
+              <md-list-item class="md-inset" to="/chapter3-2">Read</md-list-item>
+              <md-list-item class="md-inset" to="/chapter3-3">Update</md-list-item>
+              <md-list-item class="md-inset" to="/chapter3-4">Delete</md-list-item>
+            </md-list>
           </md-list-item>
 
-          <md-list-item>
-            <md-avatar class="md-avatar-icon">4</md-avatar>
-            <span class="md-list-item-text">Hello World</span>
-          </md-list-item>
         </md-list>
       </md-app-drawer>
 
@@ -42,6 +44,8 @@
 
 
 <style>
+@import "~vue-material/dist/vue-material.min.css";
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -60,5 +64,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+md-app {
+  min-height: 100vh;
 }
 </style>
