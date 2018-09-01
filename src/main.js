@@ -9,8 +9,8 @@ Vue.use(VueMaterial);
 Vue.config.productionTip = false;
 console.log;
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
   components: { App },
-  template: '<App/>'
+  template: "<App/>"
 });
