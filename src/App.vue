@@ -47,23 +47,23 @@
 @import "~vue-material/dist/vue-material.min.css";
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  background-color: #ededed;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.mdc-layout-app--main-container {
+  margin-top: 64px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.main {
+  max-width: 80%;
+  margin: 0 auto;
+  transition: width 0.3s;
 }
 
 md-app {
