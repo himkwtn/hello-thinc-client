@@ -4,7 +4,7 @@
     <label>Name</label>
     <md-input v-model="name"></md-input>
   </md-field>
-  <md-button class="md-raised" @click="search">Search</md-button>
+  <md-button class="md-raised" @click="del" >Delete</md-button>
 </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     };
   },
   methods: {
-    search() {
+    del() {
       console.log(this.name);
     }
   }
