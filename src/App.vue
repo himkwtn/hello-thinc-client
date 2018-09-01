@@ -1,12 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="page-container">
+    <md-app>
+      <md-app-toolbar class="md-primary">
+        <span class="md-title">Thinc Back-end</span>
+      </md-app-toolbar>
+
+      <md-app-drawer md-permanent="full">
+        <md-toolbar class="md-transparent" md-elevation="0">
+          Chapter
+        </md-toolbar>
+
+        <md-list>
+          <md-list-item>
+            <md-avatar class="md-avatar-icon">1</md-avatar>
+            <span class="md-list-item-text">Hello World</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-avatar class="md-avatar-icon">2</md-avatar>
+            <span class="md-list-item-text">Hello World</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-avatar class="md-avatar-icon">3</md-avatar>
+            <span class="md-list-item-text">Hello World</span>
+          </md-list-item>
+
+          <md-list-item>
+            <md-avatar class="md-avatar-icon">4</md-avatar>
+            <span class="md-list-item-text">Hello World</span>
+          </md-list-item>
+        </md-list>
+      </md-app-drawer>
+
+      <md-app-content>
+        <router-view/>
+      </md-app-content>
+    </md-app>
   </div>
 </template>
+
 
 <style>
 #app {
