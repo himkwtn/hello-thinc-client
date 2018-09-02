@@ -18,7 +18,8 @@ export default {
   },
   methods: {
     search() {
-      console.log(this.name);
+      const { name } = this;
+      console.log(name);
     }
   }
 };

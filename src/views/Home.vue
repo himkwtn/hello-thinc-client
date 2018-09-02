@@ -9,7 +9,7 @@ import { Api } from "@/common/api.service";
 export default {
   name: "home",
   methods: {
-    hello: () => {
+    hello() {
       console.log(Api.hello());
     }
   }

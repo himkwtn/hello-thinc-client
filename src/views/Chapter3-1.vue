@@ -62,7 +62,13 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.name, this.faculty, this.contact);
+      const { name, faculty, contact } = this;
+      const student = {
+        name,
+        faculty,
+        contact
+      };
+      console.log(student);
     }
   }
 };

@@ -2,12 +2,23 @@
   <div class="page-container">
     <md-app>
       <md-app-toolbar class="md-primary">
+        <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
+          <md-icon>menu</md-icon>
+        </md-button>
         <span class="md-title">Thinc Back-end</span>
       </md-app-toolbar>
 
-      <md-app-drawer md-permanent="full">
+      <md-app-drawer :md-active.sync="menuVisible" 
+      md-persistent="full">
         <md-toolbar class="md-transparent" md-elevation="0">
+         
           <span class="md-title">Lessons</span>
+
+          <div class="md-toolbar-section-end">
+            <md-button class="md-icon-button md-dense" @click="toggleMenu">
+              <md-icon>keyboard_arrow_left</md-icon>
+            </md-button>
+          </div>
         </md-toolbar>
 
         <md-list>
@@ -41,6 +52,20 @@
     </md-app>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    menuVisible: false
+  }),
+  methods: {
+    toggleMenu() {
+      this.menuVisible = !this.menuVisible;
+    }
+  }
+};
+</script>
+
 
 
 <style>
