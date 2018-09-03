@@ -91,7 +91,7 @@ export default {
   transition: width 0.3s;
 }
 
-md-app {
+.md-app {
   min-height: 100vh;
 }
 </style>

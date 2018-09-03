@@ -9,8 +9,8 @@ import { Api } from "@/common/api.service";
 export default {
   name: "home",
   methods: {
-    hello() {
-      console.log(Api.hello());
+    hello: async function() {
+      console.log(await Api.hello());
     }
   }
 };
