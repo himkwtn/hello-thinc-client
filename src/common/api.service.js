@@ -50,18 +50,11 @@ const ApiService = {
 export default ApiService;
 
 export const Api = {
-  // getProductList: () =>
-  //   new Promise(resolve => {
-  //     ApiService.get("shop").then(res => resolve(res.data));
-  //   }),
-  // sellProducts: products => ApiService.post("shop/sell", products),
-  // resetProducts: products => ApiService.post("shop/reset", products),
-  // promoteProducts: products => ApiService.post("shop/promote", products),
-  // login: body => ApiService.post("user/login", body),
-  // logout: () => ApiService.get("user/logout")
   hello: () => {
-    const result = ApiService.get("/students");
-    console.log(result);
+    const result = ApiService.get("/hello");
     return result;
+  },
+  getRequest: () => {
+    return ApiService.get("/");
   }
 };
