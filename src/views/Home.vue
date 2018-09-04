@@ -6,11 +6,9 @@
         {{message}}
       </md-card-content>
       <md-card-actions>
-        <div @click="close">
-          <md-avatar class="md-avatar-icon">
-            <md-icon>close</md-icon>
-          </md-avatar>
-        </div>
+        <md-button class="md-icon-button md-raised" @click="close" >
+          <md-icon >close</md-icon>
+        </md-button>
       </md-card-actions>
     </md-card>
   </div>

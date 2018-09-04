@@ -22,5 +22,8 @@
     "@vue/cli-service": "^3.0.1",
     "@vue/eslint-config-prettier": "^3.0.1",
     "vue-template-compiler": "^2.5.17"
+  },
+  "proxy": {
+    "/api": "http://localhost:3000/api"
   }
 }

@@ -2,12 +2,12 @@ import Vue from "vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import JwtService from "@/common/jwt.service";
-import { API_URL } from "@/common/config";
+
+const api = "http://localhost:3000/api";
 
 const ApiService = {
   init() {
     Vue.use(VueAxios, axios);
-    Vue.axios.defaults.baseURL = API_URL;
   },
 
   setHeader() {
@@ -51,7 +51,7 @@ export default ApiService;
 
 export const Api = {
   hello: () => {
-    const result = ApiService.get("/hello");
+    const result = ApiService.get(`${api}/hello`);
     return result;
   },
   getRequest: () => {
