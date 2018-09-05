@@ -27,19 +27,19 @@
             <span class="md-list-item-text">Hello World</span>
           </md-list-item>
 
-          <md-list-item to="/chapter2">
+          <md-list-item to="/lesson2">
             <md-avatar class="md-avatar-icon">2</md-avatar>
             <span class="md-list-item-text">GET/POST</span>
           </md-list-item>
 
-          <md-list-item md-expand to="/chapter3">
+          <md-list-item md-expand to="/lesson3">
             <md-avatar class="md-avatar-icon">3</md-avatar>
             <span class="md-list-item-text">CRUD Operartion</span>
             <md-list slot="md-expand">
-              <md-list-item class="md-inset" to="/chapter3-1">Create</md-list-item>
-              <md-list-item class="md-inset" to="/chapter3-2">Read</md-list-item>
-              <md-list-item class="md-inset" to="/chapter3-3">Update</md-list-item>
-              <md-list-item class="md-inset" to="/chapter3-4">Delete</md-list-item>
+              <md-list-item class="md-inset" to="/lesson3-1">Create</md-list-item>
+              <md-list-item class="md-inset" to="/lesson3-2">Read</md-list-item>
+              <md-list-item class="md-inset" to="/lesson3-3">Update</md-list-item>
+              <md-list-item class="md-inset" to="/lesson3-4">Delete</md-list-item>
             </md-list>
           </md-list-item>
 

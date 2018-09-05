@@ -43,10 +43,21 @@
   </md-field>
 
   <md-button class="md-raised" @click="submit">Submit</md-button>
+  <md-card v-if="newStudent">
+      <md-card-content>
+        {{newStudent}}
+      </md-card-content>
+      <md-card-actions>
+        <md-button class="md-icon-button md-raised" @click="close" >
+          <md-icon >close</md-icon>
+        </md-button>
+      </md-card-actions>
+    </md-card>
 </div>
 </template>
 
 <script>
+import { Api } from "@/common/api.service";
 export default {
   name: "Chapter-3-1",
   data() {
@@ -57,18 +68,23 @@ export default {
         phone: "",
         email: "",
         line: ""
-      }
+      },
+      newStudent: ""
     };
   },
   methods: {
-    submit() {
+    submit: async function() {
       const { name, faculty, contact } = this;
       const student = {
         name,
         faculty,
         contact
       };
-      console.log(student);
+      const { data } = await Api.createStudent(student);
+      this.newStudent = data;
+    },
+    close() {
+      this.newStudent = "";
     }
   }
 };

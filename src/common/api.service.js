@@ -57,7 +57,8 @@ export const Api = {
   getRequest: () => {
     return ApiService.get(api + "/");
   },
-  createStudent: () => {
-    return ApiService.post(api + "/students/createStudent");
-  }
+  createdStudent: student => ApiService.post(`${api}/students/create`, student),
+  findStudent: id => ApiService.get(`${api}/students/read/${id}`),
+  updateStudent: student => ApiService.post(`${api}/students/update`, student),
+  deleteStudent: id => ApiService.get(`${api}/students/delete?id=${id}`)
 };
