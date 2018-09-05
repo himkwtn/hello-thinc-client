@@ -55,6 +55,9 @@ export const Api = {
     return result;
   },
   getRequest: () => {
-    return ApiService.get("/");
+    return ApiService.get(api + "/");
+  },
+  createStudent: () => {
+    return ApiService.post(api + "/students/createStudent");
   }
 };

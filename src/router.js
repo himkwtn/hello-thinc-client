@@ -14,29 +14,29 @@ export default new Router({
       component: Home
     },
     {
-      path: "/chapter2",
-      name: "Chapter 2",
-      component: () => import("./views/Chapter2.vue")
+      path: "/lesson2",
+      name: "lesson 2",
+      component: () => import("./views/Lesson2.vue")
     },
     {
-      path: "/chapter3-1",
-      name: "Chapter 3 Create",
-      component: () => import("./views/Chapter3-1.vue")
+      path: "/lesson3-1",
+      name: "lesson 3 Create",
+      component: () => import("./views/Lesson3-1.vue")
     },
     {
-      path: "/chapter3-2",
-      name: "Chapter 3 Read",
-      component: () => import("./views/Chapter3-2.vue")
+      path: "/lesson3-2",
+      name: "lesson 3 Read",
+      component: () => import("./views/Lesson3-2.vue")
     },
     {
-      path: "/chapter3-3",
-      name: "Chapter 3 Update",
-      component: () => import("./views/Chapter3-3.vue")
+      path: "/lesson3-3",
+      name: "lesson 3 Update",
+      component: () => import("./views/Lesson3-3.vue")
     },
     {
-      path: "/chapter3-4",
-      name: "Chapter 3 Delete",
-      component: () => import("./views/Chapter3-4.vue")
+      path: "/lesson3-4",
+      name: "lesson 3 Delete",
+      component: () => import("./views/Lesson3-4.vue")
     }
   ]
 });
