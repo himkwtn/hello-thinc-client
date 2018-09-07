@@ -54,11 +54,10 @@ export const Api = {
     const result = ApiService.get(`${api}/hello`);
     return result;
   },
-  getRequest: () => {
-    return ApiService.get(api + "/");
-  },
+  getRequest: query => Vue.axios.get(`${api}/hello/get${query}`),
+  postRequest: body => Api.service.post(`${api}/hello/post`, body),
   createdStudent: student => ApiService.post(`${api}/students/create`, student),
   findStudent: id => ApiService.get(`${api}/students/read/${id}`),
   updateStudent: student => ApiService.post(`${api}/students/update`, student),
-  deleteStudent: id => ApiService.get(`${api}/students/delete?id=${id}`)
+  deleteStudent: id => Vue.axios.get(`${api}/students/delete?id=${id}`)
 };
