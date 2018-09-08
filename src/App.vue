@@ -94,4 +94,8 @@ export default {
 .md-app {
   min-height: 100vh;
 }
+
+.md-chip {
+  margin: 6px;
+}
 </style>

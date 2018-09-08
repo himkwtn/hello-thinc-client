@@ -51,13 +51,15 @@ export default ApiService;
 
 export const Api = {
   hello: () => {
-    const result = ApiService.get(`${api}/hello`);
+    const result = ApiService.get(`${api}/hello-world`);
     return result;
   },
-  getRequest: query => Vue.axios.get(`${api}/hello/get${query}`),
-  postRequest: body => Api.service.post(`${api}/hello/post`, body),
-  createdStudent: student => ApiService.post(`${api}/students/create`, student),
+  getRequest: query => Vue.axios.get(`${api}/get${query}`),
+  getRequestParams: params => Vue.axios.get(`${api}/params/${params}`),
+  postRequest: body => ApiService.post(`${api}/post`, body),
+  createStudent: student => ApiService.post(`${api}/students/create`, student),
   findStudent: id => ApiService.get(`${api}/students/read/${id}`),
-  updateStudent: student => ApiService.post(`${api}/students/update`, student),
+  updateStudent: (id, subjects) =>
+    ApiService.post(`${api}/students/update/${id}`, subjects),
   deleteStudent: id => Vue.axios.get(`${api}/students/delete?id=${id}`)
 };

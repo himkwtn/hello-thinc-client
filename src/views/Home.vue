@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
+  <div>
     <md-button class="md-raised" @click="hello">Click Me</md-button>
+    <md-chip>/api/hello-world</md-chip>
     <md-card v-if="message">
       <md-card-content>
         {{message}}
@@ -34,7 +35,4 @@ export default {
 </script>
 
 <style scoped>
-.md-button {
-  min-height: 40px;
-}
 </style>

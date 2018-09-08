@@ -1,10 +1,12 @@
 <template>
 <div>
   <md-field>
-    <label>Name</label>
-    <md-input v-model="name"></md-input>
+    <label>ID</label>
+    <md-input v-model="id"></md-input>
   </md-field>
   <md-button class="md-raised" @click="search">Search</md-button>
+  <md-chip>/api/students/read/{{id||":id"}}</md-chip>
+
   <md-card v-if="student">
       <md-card-content>
         {{student}}
@@ -24,14 +26,14 @@ export default {
   name: "Chapter-3-2",
   data() {
     return {
-      name: "",
+      id: "",
       student: ""
     };
   },
   methods: {
     search: async function() {
-      const { name } = this;
-      const { data } = await Api.findStudent(name);
+      const { id } = this;
+      const { data } = await Api.findStudent(id);
       this.student = data;
     },
     close() {

@@ -43,6 +43,8 @@
   </md-field>
 
   <md-button class="md-raised" @click="submit">Submit</md-button>
+  <md-chip>/api/students/create</md-chip>
+
   <md-card v-if="newStudent">
       <md-card-content>
         {{newStudent}}

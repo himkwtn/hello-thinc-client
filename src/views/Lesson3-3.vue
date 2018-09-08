@@ -16,6 +16,8 @@
     <md-icon >delete</md-icon>
   </md-button>
   <md-button class="md-raised" @click="update">Update</md-button>
+  <md-chip>/api/students/update/{{id||":id"}}</md-chip>
+
   <md-card v-if="updatedStudent">
       <md-card-content>
         {{updatedStudent}}
@@ -46,10 +48,9 @@ export default {
         .filter(subject => subject)
         .map(subject => subject.subject);
       const toUpdate = {
-        id: this.id,
         subjects: subjectsArr
       };
-      const { data } = await Api.updateStudent(toUpdate);
+      const { data } = await Api.updateStudent(this.id, toUpdate);
       this.updatedStudent = data;
     },
     add() {
@@ -57,6 +58,9 @@ export default {
     },
     del() {
       this.subjects.pop();
+    },
+    close() {
+      this.updatedStudent = "";
     }
   }
 };
